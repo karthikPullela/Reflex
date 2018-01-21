@@ -14,7 +14,7 @@
               "value": [
                 {
                   "mapVal": [], 
-                  "intVal": 4140
+                  "intVal": 59
                 }
               ], 
               "dataTypeName": "com.google.step_count.delta"
@@ -37,7 +37,7 @@
               "value": [
                 {
                   "mapVal": [], 
-                  "intVal": 5412
+                  "intVal": 67
                 }
               ], 
               "dataTypeName": "com.google.step_count.delta"
@@ -60,7 +60,7 @@
               "value": [
                 {
                   "mapVal": [], 
-                  "intVal": 6825
+                  "intVal": 60
                 }
               ], 
               "dataTypeName": "com.google.step_count.delta"
@@ -83,7 +83,7 @@
               "value": [
                 {
                   "mapVal": [], 
-                  "intVal": 10887
+                  "intVal": 68
                 }
               ], 
               "dataTypeName": "com.google.step_count.delta"
@@ -106,7 +106,7 @@
               "value": [
                 {
                   "mapVal": [], 
-                  "intVal": 8771
+                  "intVal": 74
                 }
               ], 
               "dataTypeName": "com.google.step_count.delta"
@@ -129,7 +129,7 @@
               "value": [
                 {
                   "mapVal": [], 
-                  "intVal": 5062
+                  "intVal": 80
                 }
               ], 
               "dataTypeName": "com.google.step_count.delta"
@@ -152,7 +152,7 @@
               "value": [
                 {
                   "mapVal": [], 
-                  "intVal": 1884
+                  "intVal": 70
                 }
               ], 
               "dataTypeName": "com.google.step_count.delta"
