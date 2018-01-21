@@ -1,17 +1,26 @@
 <!Doctype html>
 <html>
-
 <head>
-    <link rel="shortcut icon" href="pics/Airplane.ico" />
     <title>Reflex</title>
-
-
-    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="main.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 
-</head>
+    <meta name="google-signin-client_id" content="1028038812776-ovsjf90n1m620svlfncolr3h00c0frdn.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script type="text/javascript">
+      function onSignIn(googleUser) {
+        var profile = googleUser.getBasicProfile();
+        console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+        console.log('Name: ' + profile.getName());
+        console.log('Image URL: ' + profile.getImageUrl());
+        console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+        window.location.href = "http://localhost:8000/dashboard.html";
+      }
+    </script>
+  </head>
 
 <body>
 
@@ -23,11 +32,10 @@
 
         <p class="inputs">Welcome to Relfex Fitness!
             <br>
-            <a href="planePage.html"><button id="begin">Begin Process</button></a>
+            <button class="g-signin2" data-onsuccess="onSignIn" id="begin"></button>
             <br>
         </p>
     </div>
-
 
     <script type="text/javascript" src="indexJs.js"></script>
 
