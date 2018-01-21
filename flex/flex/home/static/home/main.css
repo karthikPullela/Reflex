@@ -1,3 +1,8 @@
+/* p.title */
+/* background image */
+/* "#00897B" */
+/* subtitle */
+/* button */
 html {
     margin: 0;
     padding: 0;
@@ -14,7 +19,8 @@ body {
     position: relative;
     height: 100%;
     width: 100%;
-    background-image: url(http://www.mulierchile.com/nike-running-wallpapers/nike-running-wallpapers-005.jpg);
+    /*background-image: url(http://www.mulierchile.com/nike-running-wallpapers/nike-running-wallpapers-005.jpg);*/
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&w=1950&q=80);
     /*background-image: url('pics/indexbg.jpg');*/
     background-repeat: no-repeat;
     background-size: cover;
@@ -54,11 +60,14 @@ p.title {
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Unica One', cursive;
+    /*font-family: 'Open Sans Condensed', sans-serif;*/
     font-size: 200px;
-    color: #C0C0C0;
+    /*color: #C0C0C0;*/
+    color: white;
     margin-top: 150px;
-    text-shadow: 0px 0px 2px #000;
+    /*text-shadow: 0px 0px 2px #000;*/
+    text-shadow: 2px 2px 4px #000000;
 }
 
 
@@ -87,9 +96,11 @@ font.title {
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Contrail One', cursive;
+  /*font-family: 'Open Sans Condensed', sans-serif;*/
   font-size: 50px;
-  color: #546E7A;
+  /*color: #546E7A;*/
+  color: #FFFFFF;
   margin-top:330px;
 }
 html, html a {
@@ -134,7 +145,7 @@ button {
     font-size: 20px;
     letter-spacing: 2px;
     font-style: oblique;
-    background-color: #00B8D4;
+    background-color: #C0C0C0; /*#00B8D4*/
     color: white;
     height: 45px;
     width: 150px;
