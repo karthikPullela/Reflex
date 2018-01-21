@@ -10,36 +10,67 @@
 
     <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
 
+
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" type="text/css" href="{% static '/home/main.css' %}">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 </head>
+
+
+
+
 <body>
-	<h1>FLEX - health</h1>
 	<br><br>
 
-	    <div class="input">
-	        <p class="title">Reflex
-	        <font color="yellow" class="title">Accomplishing goals in a better way</font>
-	        </p>
-	        {% if request.user.is_authenticated %}
-		        <p class="inputs"> Welcome, {{ request.user.username }}
-		            <br>
-		            <a href="{% url 'logout' %}"><button id="begin">End Process</button></a>
-		            <br>
-		        </p>
+  <div class="container-fluid">
+    <div class="row nav">
+      <div class="col-sm-5">
+      </div>
+      <div class="col-sm-7">
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+    <div class="input">
+        <p class="title">ReFleX
+        <p class="subtitle">Compete With <font color = "#00897B"><font-size = 40px><b>You</b></font></font></font>
+        </p>
+
+
+			{% if request.user.is_authenticated %}
+		        <p class="inputs">
+	            <br>
+	            <a href="{% url 'logout' %}"><button id="begin">LOGOUT</button></a>
+	            <br>
 		    {% else %}
-		       	<p class="inputs">Welcome to Reflex Fitness!
-		            <br>
-		            <a href="{% url 'signin' %}"><button id="begin">Begin Process</button></a>
-		            <br>
-		        </p>
+		       	<p class="inputs">
+	            <br>
+	            <a href="{% url 'signin' %}"><button id="begin">BEGIN</button></a>
+	            <br>
 		    {% endif %}
+
+
+        <!--p class="inputs">
+            <br>
+            <a href="{% url 'logout' %}"><button id="begin">BEGIN</button></a>
+            <br>
+        </p-->
+    </div>
     </div>
 
-    {{ r }}
+
+    <script type="text/javascript" src="indexJs.js"></script>
 
 
     <script type="text/javascript" src="{% static '/home/indexJs.js' %}"></script>
 </body>
-</html>
 </html>

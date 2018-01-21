@@ -15,7 +15,6 @@ body {
     height: 100%;
     width: 100%;
     background-image: url(http://www.mulierchile.com/nike-running-wallpapers/nike-running-wallpapers-005.jpg);
-    /*background-image: url('pics/indexbg.jpg');*/
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -29,6 +28,7 @@ div.navbar {
   justify-content: center;
   padding-left: 425px;
   position: absolute;
+  <!-->rgba = red blue green alpha. alpha is<!-->
 }
 .navbar .item{
   color: white;
@@ -158,4 +158,6 @@ button:hover {
   position: fixed;
   top: 0;
   background-color: blue;
+
+
 }

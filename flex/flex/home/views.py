@@ -28,6 +28,7 @@ def user_login(request):
 	auth_user = authenticate(request, username=username, password=password)
 	if auth_user is not None:
 		login(request, auth_user)
+		#return HttpResponse(request.user.username)
 		return redirect('home') # -----------
 	else:
 		return HttpResponse("Unable to log in. User not found. <br>Please check superuser for more details.")
