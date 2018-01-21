@@ -77,7 +77,7 @@ def dash(request):
 		calories_data.append(my_data['bucket'][i]['dataset'][0]['point'][0]['value'][0]['fpVal'])
 		i = i+1
 
-	return render(request, 'home/home.html', 
+	return render(request, 'home/dashboard.html', 
 		{
 		'calories_data':calories_data,
 		'walk_data':walk_data,

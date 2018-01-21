@@ -1,0 +1,126 @@
+<!Doctype html>
+<html>
+
+<head>
+  {% load static %}
+    <link rel="shortcut icon" href="pics/Airplane.ico" />
+    <title>Reflex</title>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'home/dash.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/7b29adddad.js"></script>
+
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Completed', 11],
+          ['To Go' , 13],
+        ]);
+        var options = {
+          title: 'Personal Goal Graph',
+          pieHole: 0.8,
+          colors:['red','#004411'],
+        };
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        chart.draw(data, options);
+      }
+      function getData(value){
+      }
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawVisualization);
+      function drawVisualization() {
+        // Some raw data (not necessarily accurate)
+        var data = google.visualization.arrayToDataTable([
+         ['Day', 'Steps', 'Calories', 'Sleep', 'Activity', 'Average'],
+         ['01/05',  10, 94, 90, 84, 70],
+         ['01/06',  70, 90, 91, 84, 84],
+         ['01/07',  96, 98, 70, 93, 90],
+         ['01/08',  83, 90, 90, 75, 85],
+         ['01/09',  80, 90, 93, 95, 90]
+      ]);
+    var options = {
+      title : 'Daily Fitness Goals',
+      vAxis: {title: 'Percent'},
+      hAxis: {title: 'Days'},
+      seriesType: 'bars',
+      series: {5: {type: 'line'}}
+    };
+    var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+    chart.draw(data, options);
+  }
+    </script>
+</head>
+
+<body>
+  <div class="nav container-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+        <font color="white">Reflex</font>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid cardsCont">
+
+    <div class="row goalRow">
+      <div class="col-md-6 cardCont">
+        <div class="card">
+          <div id="piechart" class="circleGraph"></div>
+        </div>
+        <!---graph -->
+      </div>
+      <div class="col-md-6 cardCont">
+        <div class="row twoCardRow">
+          <div class="col-md-6 cardCont">
+            <div class="card stepsC">
+              <i class="fa fa-male fa-2x" aria-hidden="true"></i>
+              <p class="cardInfo">Steps</p>
+              <p class="cardData">1000</p>
+            </div>
+          </div>
+          <div class="col-md-6 cardCont">
+            <div class="card calC">
+              <i class="fa fa-fire fa-2x" aria-hidden="true"></i>
+              <p class="cardInfo">Calories</p>
+              <p class="cardData">250 Calories</p>
+            </div>
+          </div>
+        </div>
+        <div class="row twoCardRow">
+          <div class="col-md-6 cardCont">
+            <div class="card sleepC">
+              <i class="fa fa-bed fa-2x" aria-hidden="true"></i>
+              <p class="cardInfo">Sleep</p>
+              <p class="cardData">8.5 hours</p>
+            </div>
+          </div>
+          <div class="col-md-6 cardCont">
+            <div class="card activityC">
+              <i class="fa fa-heart fa-2x" aria-hidden="true"></i>
+              <p class="cardInfo">Activity</p>
+              <p class="cardData">1 hours</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mainGCont">
+      <div class"col-md-12 mainG">
+        <div id="chart_div" class="mainGraph"></div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
