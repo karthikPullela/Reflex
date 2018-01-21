@@ -1,13 +1,45 @@
-<html>
 <!DOCTYPE html>
 <html>
+
+<html>
 <head>
+	{% load static %}
+	<link rel="shortcut icon" href="pics/Airplane.ico" />
 	<title>Flex</title>
+	<link rel="stylesheet" type="text/css" href="{% static '/home/main.css' %}">
+
+    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="{% static '/home/main.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 </head>
 <body>
 	<h1>FLEX - health</h1>
 	<br><br>
-	{{ r.text }}
+
+	    <div class="input">
+	        <p class="title">Reflex
+	        <font color="yellow" class="title">Accomplishing goals in a better way</font>
+	        </p>
+	        {% if request.user.is_authenticated %}
+		        <p class="inputs"> Welcome, {{ request.user.username }}
+		            <br>
+		            <a href="{% url 'logout' %}"><button id="begin">End Process</button></a>
+		            <br>
+		        </p>
+		    {% else %}
+		       	<p class="inputs">Welcome to Reflex Fitness!
+		            <br>
+		            <a href="{% url 'signin' %}"><button id="begin">Begin Process</button></a>
+		            <br>
+		        </p>
+		    {% endif %}
+    </div>
+
+    {{ r }}
+
+
+    <script type="text/javascript" src="{% static '/home/indexJs.js' %}"></script>
 </body>
 </html>
 </html>

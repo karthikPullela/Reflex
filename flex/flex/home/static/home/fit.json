@@ -1,0 +1,165 @@
+{
+  "bucket": [
+    {
+      "startTimeMillis": "1515909198911", 
+      "endTimeMillis": "1515995598911", 
+      "dataset": [
+        {
+          "dataSourceId": "derived:com.google.step_count.delta:com.google.android.gms:aggregated", 
+          "point": [
+            {
+              "startTimeNanos": "1515915688421000000", 
+              "originDataSourceId": "derived:com.google.step_count.cumulative:com.google.android.gms:samsung:SAMSUNG-SM-J327A:f70f7ad15285587:soft_step_counter", 
+              "endTimeNanos": "1515994617428000000", 
+              "value": [
+                {
+                  "mapVal": [], 
+                  "intVal": 4140
+                }
+              ], 
+              "dataTypeName": "com.google.step_count.delta"
+            }
+          ]
+        }
+      ]
+    }, 
+    {
+      "startTimeMillis": "1515995598911", 
+      "endTimeMillis": "1516081998911", 
+      "dataset": [
+        {
+          "dataSourceId": "derived:com.google.step_count.delta:com.google.android.gms:aggregated", 
+          "point": [
+            {
+              "startTimeNanos": "1515995775226967426", 
+              "originDataSourceId": "derived:com.google.step_count.cumulative:com.google.android.gms:samsung:SAMSUNG-SM-J327A:f70f7ad15285587:soft_step_counter", 
+              "endTimeNanos": "1516077452860997579", 
+              "value": [
+                {
+                  "mapVal": [], 
+                  "intVal": 5412
+                }
+              ], 
+              "dataTypeName": "com.google.step_count.delta"
+            }
+          ]
+        }
+      ]
+    }, 
+    {
+      "startTimeMillis": "1516081998911", 
+      "endTimeMillis": "1516168398911", 
+      "dataset": [
+        {
+          "dataSourceId": "derived:com.google.step_count.delta:com.google.android.gms:aggregated", 
+          "point": [
+            {
+              "startTimeNanos": "1516119006439973641", 
+              "originDataSourceId": "derived:com.google.step_count.cumulative:com.google.android.gms:samsung:SAMSUNG-SM-J327A:f70f7ad15285587:soft_step_counter", 
+              "endTimeNanos": "1516167518351915656", 
+              "value": [
+                {
+                  "mapVal": [], 
+                  "intVal": 6825
+                }
+              ], 
+              "dataTypeName": "com.google.step_count.delta"
+            }
+          ]
+        }
+      ]
+    }, 
+    {
+      "startTimeMillis": "1516168398911", 
+      "endTimeMillis": "1516254798911", 
+      "dataset": [
+        {
+          "dataSourceId": "derived:com.google.step_count.delta:com.google.android.gms:aggregated", 
+          "point": [
+            {
+              "startTimeNanos": "1516208511838003657", 
+              "originDataSourceId": "derived:com.google.step_count.cumulative:com.google.android.gms:samsung:SAMSUNG-SM-J327A:f70f7ad15285587:soft_step_counter", 
+              "endTimeNanos": "1516248714524000464", 
+              "value": [
+                {
+                  "mapVal": [], 
+                  "intVal": 10887
+                }
+              ], 
+              "dataTypeName": "com.google.step_count.delta"
+            }
+          ]
+        }
+      ]
+    }, 
+    {
+      "startTimeMillis": "1516254798911", 
+      "endTimeMillis": "1516341198911", 
+      "dataset": [
+        {
+          "dataSourceId": "derived:com.google.step_count.delta:com.google.android.gms:aggregated", 
+          "point": [
+            {
+              "startTimeNanos": "1516291511303066257", 
+              "originDataSourceId": "derived:com.google.step_count.cumulative:com.google.android.gms:samsung:SAMSUNG-SM-J327A:f70f7ad15285587:soft_step_counter", 
+              "endTimeNanos": "1516336212893022002", 
+              "value": [
+                {
+                  "mapVal": [], 
+                  "intVal": 8771
+                }
+              ], 
+              "dataTypeName": "com.google.step_count.delta"
+            }
+          ]
+        }
+      ]
+    }, 
+    {
+      "startTimeMillis": "1516341198911", 
+      "endTimeMillis": "1516427598911", 
+      "dataset": [
+        {
+          "dataSourceId": "derived:com.google.step_count.delta:com.google.android.gms:aggregated", 
+          "point": [
+            {
+              "startTimeNanos": "1516383728488990926", 
+              "originDataSourceId": "derived:com.google.step_count.cumulative:com.google.android.gms:samsung:SAMSUNG-SM-J327A:f70f7ad15285587:soft_step_counter", 
+              "endTimeNanos": "1516414438267918925", 
+              "value": [
+                {
+                  "mapVal": [], 
+                  "intVal": 5062
+                }
+              ], 
+              "dataTypeName": "com.google.step_count.delta"
+            }
+          ]
+        }
+      ]
+    }, 
+    {
+      "startTimeMillis": "1516427598911", 
+      "endTimeMillis": "1516513998911", 
+      "dataset": [
+        {
+          "dataSourceId": "derived:com.google.step_count.delta:com.google.android.gms:aggregated", 
+          "point": [
+            {
+              "startTimeNanos": "1516460952729000000", 
+              "originDataSourceId": "derived:com.google.step_count.cumulative:com.google.android.gms:samsung:SAMSUNG-SM-J327A:f70f7ad15285587:soft_step_counter", 
+              "endTimeNanos": "1516498195733000000", 
+              "value": [
+                {
+                  "mapVal": [], 
+                  "intVal": 1884
+                }
+              ], 
+              "dataTypeName": "com.google.step_count.delta"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
