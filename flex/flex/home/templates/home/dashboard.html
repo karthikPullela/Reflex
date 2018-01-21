@@ -17,18 +17,29 @@
     <script src="https://use.fontawesome.com/7b29adddad.js"></script>
 
     <script type="text/javascript">
+      var i = 5;
+      a = [];
+      b = [];
+      {% for num in walk_data %}
+        a.push(parseInt({{num}}));
+      {% endfor %}
+      
+      {% for fit in calories_data %}
+        b.push(parseInt({{fit}}));
+      {% endfor %}
+
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ['Task', 'Hours per Day'],
-          ['Completed', 11],
-          ['To Go' , 13],
+          ['Completed', 10],
+          ['To Go' , 2],
         ]);
         var options = {
           title: 'Personal Goal Graph',
-          pieHole: 0.8,
-          colors:['red','#004411'],
+          pieHole: 0.7,
+          colors:['orange','white'],
         };
         var chart = new google.visualization.PieChart(document.getElementById('piechart'));
         chart.draw(data, options);
@@ -41,12 +52,13 @@
         // Some raw data (not necessarily accurate)
         var data = google.visualization.arrayToDataTable([
          ['Day', 'Steps', 'Calories', 'Sleep', 'Activity', 'Average'],
-         ['01/05',  10, 94, 90, 84, 70],
-         ['01/06',  70, 90, 91, 84, 84],
-         ['01/07',  96, 98, 70, 93, 90],
-         ['01/08',  83, 90, 90, 75, 85],
-         ['01/09',  80, 90, 93, 95, 90]
+         ['01/05',  a[0], b[0], 90, 84, 70],
+         ['01/06',  a[1], b[1], 91, 84, 84],
+         ['01/07',  a[2], b[2], 70, 93, 90],
+         ['01/08',  a[3], b[3], 90, 75, 85],
+         ['01/09',  a[4], b[4], 93, 95, 90]
       ]);
+
     var options = {
       title : 'Daily Fitness Goals',
       vAxis: {title: 'Percent'},

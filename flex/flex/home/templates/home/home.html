@@ -9,6 +9,10 @@
 	<link rel="stylesheet" type="text/css" href="{% static '/home/main.css' %}">
 
     <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+    
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="603222874022-4msscrpqkgc4o8qn9ng3r0tetadcl69t.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
 
 
     <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
@@ -63,7 +67,8 @@
 		       	<p class="inputs">
             </p>
 	            <br>
-	            <a href="{% url 'log' %}"><button id="begin">BEGIN</button></a>
+	            <a href="{% url ''social:begin' 'google-oauth2'' %}"><button id="begin">BEGIN</button></a><br>
+              
 	            <br>
 		    {% endif %}
     </div>

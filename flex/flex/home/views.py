@@ -53,6 +53,15 @@ def user_login(request):
 	return HttpResponse("It's not supposed to come till here.")
 
 
+def return_data(request):
+	if request.user.is_authenticated:
+		uri = 'https://www.googleapis.com/fitness/v1/users/me/dataSources'
+		r = requests.get(uri)
+		return HttpResponse("Works, I guess.", auth=(request.user.username, request.user.password))
+	else:
+		return HttpResponse("User not authenticated")
+
+
 
 def dash(request):
 
