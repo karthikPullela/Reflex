@@ -13,7 +13,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://use.fontawesome.com/7b29adddad.js"></script>
 
+    <meta name="google-signin-client_id" content="1028038812776-ovsjf90n1m620svlfncolr3h00c0frdn.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
     <script type="text/javascript">
+
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
       function drawChart() {
@@ -58,16 +64,23 @@
 </head>
 
 <body>
-  <div class="nav container-fluid">
-    <div class="row">
-      <div class="col-sm-12">
-        <font color="white">Reflex</font>
-      </div>
+  <div class="g-signin2" data-onsuccess="onSignIn"></div>
+  <div class="nav">
+    <div id="home" onclick="signOut();" class="home"><i class="fa fa-home fa-3x home" aria-hidden="true"></i></div>
+    <div class="profile">
+      <p id="email"></p>
+      <img id="profImg" src="" />
     </div>
   </div>
 
   <div class="container-fluid cardsCont">
 
+    <div class="row">
+      <div class="col-sm-12 welRow">
+        <p id="welcome">Welcome to your interactive Fitness Program!</p>
+      </div>
+    </div>
+    <hr class="hr">
     <div class="row goalRow">
       <div class="col-md-6 cardCont">
         <div class="card">
@@ -118,6 +131,29 @@
     </div>
   </div>
 
+<script type="text/javascript">
+  function onSignIn(googleUser) {
+    var profile = googleUser.getBasicProfile();
+    console.log('hi');
+    console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+    console.log('Name: ' + profile.getName());
+    console.log('Image URL: ' + profile.getImageUrl());
+    console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+    document.getElementById("welcome").innerHTML = 'Welcome to your interactive fitness program, ' + profile.getName() + '!';
+    document.getElementById('email').innerHTML = profile.getEmail();
+    document.getElementById('profImg').src = profile.getImageUrl();
+  }
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
+  $('#home').click(function() {
+
+    window.location.href = "http://localhost:8000";
+  });
+</script>
 </body>
 
 </html>
